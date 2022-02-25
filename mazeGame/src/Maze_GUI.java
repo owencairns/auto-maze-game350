@@ -18,6 +18,26 @@ public class Maze_GUI extends JComponent{
 		
         JFrame frame = new JFrame("Maze Game");
        // JPanel panel = new JPanel();
+        JLabel turns = new JLabel("Turns: ");
+        JLabel diff = new JLabel("Difficulty: ");
+        JLabel h4help = new JLabel("'H' for Help ");
+        JLabel menu = new JLabel("'M' for Menu");
+        JLabel quit = new JLabel("'Q' for Quit");
+        turns.setBounds(450, 20, 800, 100);
+        turns.setFont(new Font("Arial", Font.PLAIN, 32)); 
+        diff.setBounds(450, 20, 800, 250);
+        diff.setFont(new Font("Arial", Font.PLAIN, 32)); 
+        h4help.setBounds(450, 20, 800, 400);
+        h4help.setFont(new Font("Arial", Font.PLAIN, 32)); 
+        menu.setBounds(450, 20, 800, 550);
+        menu.setFont(new Font("Arial", Font.PLAIN, 32)); 
+        quit.setBounds(450, 20, 800, 700);
+        quit.setFont(new Font("Arial", Font.PLAIN, 32)); 
+        frame.add(turns);
+        frame.add(diff);
+        frame.add(h4help);
+        frame.add(menu);
+        frame.add(quit);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(50, 50, 800, 480);
         frame.getContentPane().add(new MyCanvas());
