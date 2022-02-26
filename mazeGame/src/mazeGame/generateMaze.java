@@ -15,6 +15,13 @@ public class generateMaze {
 	     }
 		
 	}
+	
+	/*
+     * generates the maze based on https://en.wikipedia.org/wiki/Maze_generation_algorithm
+     * main function for creating the maze
+     * @Param int mapSize, takes and int to determine what the maze size will be
+     */
+	
 	//generates the maze based on https://en.wikipedia.org/wiki/Maze_generation_algorithm
 	public static int[][] mazeGen(int mapSize) {
 		//this is our maze map to be
@@ -33,6 +40,15 @@ public class generateMaze {
 		}
 		return mazeMap;
 	}
+	
+	
+	/*
+     * creates walls around the outside of the maze
+     * walls are 1, walkable tiles are 0
+     * function for walling up the outside of the maze
+     * @Param int mapSize, takes and int to determine what the maze size will be
+     * @Param int[][] mazeMap, takes an int[][] to change the value of
+     */
 	
 	public static void wallConstruction(int[][] mazeMap, int mapSize) {
 		//put walls around entire maze
@@ -58,6 +74,15 @@ public class generateMaze {
             mazeMap[i][mapSize - 1] = 1;
         }
 	}
+	
+	/*
+     * constructs a maze of a given size on an int[][]
+     * function for generating the maze
+     * will not work on mazes smaller than 3x3
+     * @Param int mapSize, takes and int to determine what the maze size will be
+     * @Param int[][] mazeMap, takes an int[][] to change the value of
+     */
+	
 	public static void mazeConstruction(int[][] mazeMap, int mapSize) {
 		if (mapSize < 3) {
 			throw new ArithmeticException("Maze too small");
