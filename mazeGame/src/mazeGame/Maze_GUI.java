@@ -13,7 +13,7 @@ import java.awt.Font;
 
 public class Maze_GUI extends JComponent{
 	
-	private int difficulty = 20;
+	private int difficulty = 9;
 	generateMaze newMaze = new generateMaze();
 	private int [][] maze = newMaze.mazeGen(difficulty);
 	
@@ -58,13 +58,13 @@ public class Maze_GUI extends JComponent{
 	{
 	    public void paint(Graphics g) 
 	    {
-	        g.fillRect (20, 20, 400, 400);
+	        //g.fillRect (20, 20, 400, 400);
 	        
 	        for (int row = 0; row < maze.length; row++) {
 	        	for (int col = 0; col < maze[0].length; col++) {
 	        		Color color;
 	        		switch (maze[row][col]) {
-	        		case 1: color = Color.BLUE; break;
+	        		case 0: color = Color.BLACK; break;
 	        		case 9: color = Color.RED; break;
 	        		default: color = Color.WHITE;
 	        		}

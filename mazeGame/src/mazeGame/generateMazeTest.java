@@ -1,9 +1,12 @@
 package mazeGame;
-import generateMaze;
+
 
 public class generateMazeTest {
+	
+	generateMaze mazeTest = new generateMaze();
+	private int [][] test = mazeTest.mazeGen(-13);
+	
 	void test_Constructor() {
-		generateMaze(13);
 	}
 	void test_mazeGen() {
 		
