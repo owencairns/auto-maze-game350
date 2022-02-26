@@ -17,11 +17,18 @@ public class Maze_GUI extends JComponent{
 	generateMaze newMaze = new generateMaze();
 	private int [][] maze = newMaze.mazeGen(difficulty);
 	
+	/*
+	 * runs the GUI
+	 */
 	public static void main(String[] args) {
 		Maze_GUI board = new Maze_GUI();
 		board.GUI();
 	}
 
+	/*
+	 * creates the GUI for the entire program
+	 * adds different swing components to the GUI
+	 */
 	public void GUI() {
 		
 		JFrame frame = new JFrame("Maze Game");
@@ -53,6 +60,10 @@ public class Maze_GUI extends JComponent{
 	        frame.getContentPane().setBackground(Color.decode("#a5f1fa"));      
 	}
 	
+	/*
+	 * takes the generated maze and displays it
+	 * loops through the generated maze in array format, and outputs the values as colored tiles
+	 */
 	@SuppressWarnings("serial")
 	class MyCanvas extends JComponent 
 	{
