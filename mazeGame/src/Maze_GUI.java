@@ -42,8 +42,7 @@ public class Maze_GUI extends JComponent{
 	        frame.setBounds(50, 50, 800, 480);
 	        frame.getContentPane().add(new MyCanvas());
 	        frame.setVisible(true);
-	        frame.getContentPane().setBackground(Color.decode("#a5f1fa"));
-        
+	        frame.getContentPane().setBackground(Color.decode("#a5f1fa"));      
 	}
 	
 	@SuppressWarnings("serial")
@@ -52,6 +51,21 @@ public class Maze_GUI extends JComponent{
 	    public void paint(Graphics g) 
 	    {
 	        g.fillRect (20, 20, 400, 400);
+	        
+	        for (int row = 0; row < maze.length; row++) {
+	        	for (int col = 0; col < maze[0].length; col++) {
+	        		Color color;
+	        		switch (maze[row][col]) {
+	        		case 1: color = Color.GREEN; break;
+	        		case 9: color = Color.RED; break;
+	        		default: color = Color.WHITE;
+	        		}
+	        		g.setColor(color);
+	        		g.fillRect(30*col, 30*row, 30, 30);
+	        		g.setColor(Color.BLACK);
+	        		g.drawRect(30*col, 30*row, 30, 30); 
+	        	}
+	        }
 	    }
 	}
 
