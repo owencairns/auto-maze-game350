@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"mazeGame","l":"generateMaze"},{"p":"mazeGame","l":"generateMazeTest"},{"p":"mazeGame","l":"Maze_GUI"},{"p":"mazeGame","l":"mazeGame"},{"p":"mazeGame","l":"player"}];updateSearchResults();
