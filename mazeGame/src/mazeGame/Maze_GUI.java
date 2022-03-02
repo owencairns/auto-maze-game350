@@ -11,6 +11,10 @@ import java.awt.Graphics;
 import java.awt.Color;
 import java.awt.Font;
 
+/*
+ * main GUI class to run the game and display the generated maze(s)
+ * @author Kren, Owen
+ */
 public class Maze_GUI extends JComponent{
 	
 	private int difficulty = 9;
